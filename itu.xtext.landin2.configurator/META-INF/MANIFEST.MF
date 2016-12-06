@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: itu.xtext.landin2.configurator
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: itu.xtext.landin2.configurator; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: itu.xtext.landin2.configurator.exco,
+ itu.xtext.landin2.configurator.parser.antlr,
+ itu.xtext.landin2.configurator.generator,
+ itu.xtext.landin2.configurator.serializer,
+ itu.xtext.landin2.configurator.exco.util,
+ itu.xtext.landin2.configurator.validation,
+ itu.xtext.landin2.configurator.scoping,
+ itu.xtext.landin2.configurator.services,
+ itu.xtext.landin2.configurator.parser.antlr.internal,
+ itu.xtext.landin2.configurator,
+ itu.xtext.landin2.configurator.exco.impl
+Import-Package: org.apache.log4j

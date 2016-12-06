@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<?eclipse version="3.0"?>
+<plugin>
+	<extension point="org.eclipse.emf.ecore.generated_package">
+		<package 
+			uri = "http://www.xtext.itu/landin2/configurator/Exco"
+			class = "itu.xtext.landin2.configurator.exco.ExcoPackage"
+			genModel = "model/generated/Exco.genmodel" />
+	</extension>
+</plugin>

@@ -1,0 +1,47 @@
+grammar itu.xtext.landin2.configurator.Exco with org.eclipse.xtext.common.Terminals
+
+generate exco "http://www.xtext.itu/landin2/configurator/Exco"
+
+
+Model:
+	configurator+=Configurator;
+	
+Configurator:
+	title=Title (expression+=Expression)+
+;
+
+Title:
+	name=ID (WS ID)* NL
+;
+
+Expression:
+     left=AtomicExpression (operation+=Operation right+=Expression)* | paranthesis=ParenthesisExpression
+;
+
+ParenthesisExpression returns Expression:
+	'(' Expression ')'
+;
+
+AtomicExpression returns Expression :
+	name=ID (Sep ID)*
+;
+
+FreeText:
+	name=ID (WS ID)*
+;
+
+Sep:
+	',' | ',' WS
+;
+
+Operation:
+	Binop | Unop
+;
+
+Binop:
+	'and' | 'or' | 'equals' | 'requires' | 'is' | 'are' | 'excludes'
+;
+
+Unop:
+	'not'
+;

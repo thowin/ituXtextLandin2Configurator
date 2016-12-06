@@ -1,0 +1,9 @@
+grammar itu.xtext.landin2.configurator.Exco with org.eclipse.xtext.common.Terminals
+
+generate exco "http://www.xtext.itu/landin2/configurator/Exco"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
